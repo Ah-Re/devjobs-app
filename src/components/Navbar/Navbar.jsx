@@ -9,6 +9,7 @@ const Navbar = (props) => {
     return (
         <nav className="nav-bar">
             <h1>devjobs</h1>
+            <div>
             <img src={SunIcon} />
             <div onClick={() => {
                 props.changeMode();
@@ -19,6 +20,7 @@ const Navbar = (props) => {
                 </div>
             </div>
             <img src={MoonIcon} />
+            </div>
         </nav>
     )
 }
