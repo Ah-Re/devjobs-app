@@ -3,3 +3,13 @@ body, html {
   padding: 0;
   font-family: 'Kumbh Sans', sans-serif; 
 }
+
+:root {
+  --violet: #6064e4;
+  --light-violet: #939bf4;
+  --very-dark-blue: #19202d;
+  --midnight: #121721;
+  --light-gray: #f4f6f8;
+  --gray: #9daec2;
+  --dark-gray: #6e8098;
+}

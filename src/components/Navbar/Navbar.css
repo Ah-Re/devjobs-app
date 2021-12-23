@@ -12,4 +12,20 @@
         margin-top: 0;
     }
 
+    .toggle-btn {
+        background-color: white;
+        border-radius: 30px;
+        cursor: pointer;
+        width: 60px;
+        height: 25px;
+        padding: 5px;
+    }
+
+    .inner-circle {
+        background-color: var(--violet);
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+    }
+
 }
