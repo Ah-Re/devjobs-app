@@ -1,6 +1,7 @@
 import { useState } from "react";
 import './App.css';
 import Navbar from "./components/Navbar/Navbar";
+import Searchbar from "./components/Searchbar/Searchbar";
 
 
 function App() {
@@ -12,8 +13,10 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div style={dark ? {backgroundColor: "var(--midnight)"} : {backgroundColor: "var(--light-gray)"}}className="App">
     <Navbar dark={dark} changeMode={changeMode}/>
+    <Searchbar />
+    
     </div>
   );
 }
