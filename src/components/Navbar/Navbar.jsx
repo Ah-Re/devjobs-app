@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from "../../App";
 import SunIcon from "../../assets/desktop/icon-sun.svg";
 import MoonIcon from "../../assets/desktop/icon-moon.svg";
 import "./Navbar.css";
 
 const Navbar = (props) => {
 
+    const dark = useContext(ThemeContext);
 
     return (
         <nav className="nav-bar">
@@ -13,9 +15,9 @@ const Navbar = (props) => {
             <img src={SunIcon} />
             <div onClick={() => {
                 props.changeMode();
-                console.log(props.dark);
+                
             }} className="toggle-btn">
-                <div style={props.dark === true ? {marginLeft: "auto"} : null} className="inner-circle">
+                <div style={dark === true ? {marginLeft: "auto"} : null} className="inner-circle">
 
                 </div>
             </div>

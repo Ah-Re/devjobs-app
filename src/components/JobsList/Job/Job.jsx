@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from "../../../App";
 import "./Job.css";
 
 
 const Job = (props) => {
 
-    
+    const dark = useContext(ThemeContext);
     return (
         <div className="job">
             <img style={{backgroundColor: 'black'}} src={props.logo} />
