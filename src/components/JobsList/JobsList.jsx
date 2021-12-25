@@ -13,7 +13,7 @@ const JobsList = () => {
 
     return (
         <div className="jobs-list">
-           {JobData.map((job, index) => {
+           {JobData.slice(0,8).map((job, index) => {
                return <Job key={index}
                    postedAt={job.postedAt}
                    contract={job.contract}
@@ -24,7 +24,9 @@ const JobsList = () => {
                    logoBackground={job.logoBackground}
                />
            }) }   
-           <button>Load More</button>     
+           <div className="button-container">
+           <button>Load More</button>   
+           </div>  
         </div>
     )
 }
