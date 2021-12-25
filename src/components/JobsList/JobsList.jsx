@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./JobsList.css";
 import JobData from "../../data.json";
 import Job from "./Job/Job";
@@ -8,12 +8,12 @@ import Job from "./Job/Job";
 const JobsList = () => {
 
     
-
+    const [visible, setVisible] = useState(6);
     
 
     return (
         <div className="jobs-list">
-           {JobData.slice(0,8).map((job, index) => {
+           {JobData.slice(0, visible).map((job, index) => {
                return <Job key={index}
                    postedAt={job.postedAt}
                    contract={job.contract}
@@ -25,7 +25,11 @@ const JobsList = () => {
                />
            }) }   
            <div className="button-container">
-           <button>Load More</button>   
+           <button onClick={() => {
+               setVisible((prevValue) => 
+                   prevValue + 6
+               );
+           }}>Load More</button>   
            </div>  
         </div>
     )
