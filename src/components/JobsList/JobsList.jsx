@@ -23,7 +23,8 @@ const JobsList = () => {
                    logo={job.logo}
                    logoBackground={job.logoBackground}
                />
-           }) }        
+           }) }   
+           <button>Load More</button>     
         </div>
     )
 }

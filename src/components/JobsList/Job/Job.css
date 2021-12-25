@@ -5,5 +5,18 @@
     .job {
         background-color: white;
         margin-bottom: 2rem;
+        padding: 2rem;
+        position: relative;
+    }
+
+    .job img {
+        width: 2rem;
+        height: 1rem;
+    }
+    .job .logo {
+        border-radius: 16px;
+        padding: 1rem 10px;
+        position: absolute;
+        top: -1rem;
     }
 }

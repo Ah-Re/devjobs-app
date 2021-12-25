@@ -6,9 +6,10 @@ import "./Job.css";
 const Job = (props) => {
 
     const dark = useContext(ThemeContext);
+
     return (
-        <div className="job">
-            <img style={{backgroundColor: 'black'}} src={props.logo} />
+        <div style={{backgroundColor: dark ? "var(--very-dark-blue)" : "white" }}className="job">
+            <img className="logo" style={{backgroundColor: props.logoBackground}} src={props.logo} />
                 {props.postedAt}
                 {props.contract}
                 {props.position}
