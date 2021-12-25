@@ -4,8 +4,9 @@
 
     .job {
         background-color: white;
+        border-radius: 10px;
         margin-bottom: 2rem;
-        padding: 2rem;
+        padding: 3rem 2rem 2rem 2rem;
         position: relative;
     }
 
@@ -18,5 +19,15 @@
         padding: 1rem 10px;
         position: absolute;
         top: -1rem;
+    }
+
+    .job .dot {
+        display: inline-block;
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+        background-color: var(--dark-gray);
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 }
