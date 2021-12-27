@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { SearchContext } from '../../App';
 import "./JobsList.css";
 import JobData from "../../data.json";
 import Job from "./Job/Job";
@@ -9,11 +10,20 @@ const JobsList = () => {
 
     
     const [visible, setVisible] = useState(6);
-    
+    const searchTerm = useContext(SearchContext);
+    console.log("Jobs List: " + searchTerm.title);
 
     return (
         <div className="jobs-list">
-           {JobData.slice(0, visible).map((job, index) => {
+           {JobData.filter((job) => {
+                if (searchTerm.title !== "") {
+                    return job.company.toLowerCase().includes(searchTerm.title) ||
+                    job.position.toLowerCase().includes(searchTerm.title) || 
+                    job.location.toLowerCase().includes(searchTerm.title);
+                } else {
+                    return job
+                }
+           }).slice(0, visible).map((job, index) => {
                return <Job key={index}
                    postedAt={job.postedAt}
                    contract={job.contract}
