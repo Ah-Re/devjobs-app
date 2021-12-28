@@ -11,7 +11,7 @@ const JobsList = () => {
     
     const [visible, setVisible] = useState(6);
     const searchTerm = useContext(SearchContext);
-    console.log("Jobs List: " + searchTerm.title);
+    
 
     return (
         <div className="jobs-list">

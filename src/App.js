@@ -16,10 +16,18 @@ function App() {
     location: "",
     fullTime: ""
   });
+  const [modal, setModal] = useState(false);
+
+  console.log(modal);
 
   function changeMode() {
     setDark(!dark);
   }
+
+  function changeModal() {
+    setModal(!modal);
+  }
+  
 
   function changeSearchTerm(term) {
     setFilter(prevValue => {
@@ -28,14 +36,17 @@ function App() {
       fullTime: prevValue.fullTime}
     });
   }
-
+  
   return (
     <div style={dark ? {backgroundColor: "var(--midnight)"} : {backgroundColor: "var(--light-gray)"}} className="App">
+    
     <ThemeContext.Provider value={dark}>
     <SearchContext.Provider value={filter}>
     <Navbar changeMode={changeMode}/>
-    <Searchbar changeSearchTerm={changeSearchTerm}/>
-    <Modal />
+    <Searchbar changeSearchTerm={changeSearchTerm}
+                changeModal={changeModal}
+    />
+    {modal && <Modal changeModal={changeModal}/>}
     <JobsList />
     </SearchContext.Provider>
     </ThemeContext.Provider>

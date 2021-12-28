@@ -15,7 +15,9 @@ const Searchbar = (props) => {
             <input style={{backgroundColor: dark ? "var(--very-dark-blue)" : "white"}} onChange={(e) => {
                 props.changeSearchTerm(e.target.value);
             }} className="searchbar" type="search" placeholder="Filter by title..." />
-            <img className="filter-icon" src={FilterIcon} />
+            <img onClick={() => {
+                props.changeModal();
+            }} className="filter-icon" src={FilterIcon} />
             <button onClick={() => {
                 
             }} className="search-button">
