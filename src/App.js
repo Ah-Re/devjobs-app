@@ -3,13 +3,14 @@ import './App.css';
 import Navbar from "./components/Navbar/Navbar";
 import Searchbar from "./components/Searchbar/Searchbar";
 import JobsList from "./components/JobsList/JobsList";
+import Modal from "./components/Modal/Modal";
 
 export const ThemeContext  = React.createContext();
 export const SearchContext = React.createContext();
 
 function App() {
 
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(true);
   const [filter, setFilter] = useState({
     title: "",
     location: "",
@@ -29,11 +30,12 @@ function App() {
   }
 
   return (
-    <div style={dark ? {backgroundColor: "var(--midnight)"} : {backgroundColor: "var(--light-gray)"}}className="App">
+    <div style={dark ? {backgroundColor: "var(--midnight)"} : {backgroundColor: "var(--light-gray)"}} className="App">
     <ThemeContext.Provider value={dark}>
     <SearchContext.Provider value={filter}>
     <Navbar changeMode={changeMode}/>
     <Searchbar changeSearchTerm={changeSearchTerm}/>
+    <Modal />
     <JobsList />
     </SearchContext.Provider>
     </ThemeContext.Provider>
