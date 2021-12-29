@@ -8,7 +8,10 @@ const Job = (props) => {
     const dark = useContext(ThemeContext);
 
     return (
-        <div style={{backgroundColor: dark ? "var(--very-dark-blue)" : "white" }} className="job">
+        
+        <div onClick={() => {
+            window.location.href="/job-page";
+        }}style={{backgroundColor: dark ? "var(--very-dark-blue)" : "white" }} className="job">
             <img className="logo" style={{backgroundColor: props.logoBackground}} src={props.logo} />
                 <span style={{color: "var(--dark-gray)" }}>{props.postedAt}</span>
                 <span className="dot"></span>
@@ -18,6 +21,7 @@ const Job = (props) => {
                 <p style={{color: "var(--violet)", fontWeight: "bold"}}>{props.location}</p>
                 
         </div>
+        
     )
 }
 
