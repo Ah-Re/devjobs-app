@@ -16,6 +16,7 @@ const Home = (props) => {
     // function changeMode() {
     //     setDark(!dark);
     //   }
+
     
       function changeModal() {
         setModal(!modal);
@@ -28,6 +29,8 @@ const Home = (props) => {
           fullTime: prevValue.fullTime}
         });
       }
+
+      
 
     return (
         <div>

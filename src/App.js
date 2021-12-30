@@ -46,15 +46,8 @@ function App() {
     
     <ThemeContext.Provider value={dark}>
     <SearchContext.Provider value={filter}>
-    {/* <Home changeMode={changeMode}/> */}
-    {/* <Navbar changeMode={changeMode}/>
-    <Searchbar changeSearchTerm={changeSearchTerm}
-                changeModal={changeModal}
-    />
-    {modal && <Modal changeModal={changeModal}/>}
-    <JobsList /> */}
     <Routes>
-    <Route path="/job-page" element={<JobPage />}/>
+    <Route path="/jobs/:company" element={<JobPage changeMode={changeMode}/>}/>
     <Route path="/" element={<Home changeMode={changeMode}/>}>
 
     </Route>

@@ -32,6 +32,10 @@ const JobsList = () => {
                    location={job.location}
                    logo={job.logo}
                    logoBackground={job.logoBackground}
+                   description={job.description}
+                   requirements={job.requirements}
+                   role={job.role}
+                   website={job.website}
                />
            }) }   
            <div className="button-container">

@@ -1,0 +1,14 @@
+@media (max-width: 750px) {
+
+    .job-title-card {
+        background-color: white;
+        text-align: center;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        
+    }
+
+    .job-title-card h2 {
+        margin-top: 0;
+    }
+}
