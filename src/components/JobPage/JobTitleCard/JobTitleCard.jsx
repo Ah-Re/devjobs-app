@@ -4,7 +4,7 @@ import "./JobTitleCard.css";
 
 const JobTitleCard = (props) => {
     
-    
+    console.log(props.logo);
     return (
         <div className="job-title-card">
             <img src={props.logo} alt="logo" />
