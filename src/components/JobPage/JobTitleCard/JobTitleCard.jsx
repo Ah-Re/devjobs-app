@@ -4,14 +4,17 @@ import "./JobTitleCard.css";
 
 const JobTitleCard = (props) => {
     
-    console.log(props.logo);
+    
     return (
+        <div className="job-title-wrapper">
         <div className="job-title-card">
-            <img src={props.logo} alt="logo" />
+            <img className="logo" style={{backgroundColor: props.logoBackground}} src={props.logo} alt="logo" />
             <h2>{props.company}</h2>
             <p>{props.website}</p>
-            <button>Company Site</button>
+            <button className="company-button">Company Site</button>
         </div>
+        </div>
+
     )
 }
 export default JobTitleCard

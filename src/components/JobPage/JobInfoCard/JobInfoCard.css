@@ -1,0 +1,16 @@
+@media (max-width: 750px) {
+
+    .job-info-card-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .job-info-card {
+        background-color: white;
+        border-radius: 10px;
+        position: relative;
+        top: 14rem;
+        width: 90%;
+
+    }
+}

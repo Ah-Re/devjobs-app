@@ -2,13 +2,13 @@ import React from 'react';
 import "./JobPage.css";
 import Navbar from "../Navbar/Navbar";
 import JobTitleCard from "./JobTitleCard/JobTitleCard";
+import JobInfoCard from "./JobInfoCard/JobInfoCard";
 import JobData from "../../data.json";
 import { useLocation } from "react-router-dom";
 
 const JobPage = (props) => {
     const { state } = useLocation();
     
-    console.log(state.logo);
     return (
         <div className="job-page">
             <Navbar changeMode={props.changeMode}/>
@@ -18,6 +18,19 @@ const JobPage = (props) => {
                             website={state.website}
                             logo={state.logo}
                             
+            />
+            <JobInfoCard 
+                postedAt={state.postedAt}
+                contract={state.contract}
+                position={state.position}
+                location={state.location}
+                description={state.description}
+                requirementsContent={state.requirements.content}
+                requirementsItems={state.requirements.items}
+                roleContent={state.role.content}
+                roleItems={state.role.items}
+
+                // role={state.role}
             />
 
         </div>

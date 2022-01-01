@@ -1,14 +1,58 @@
 @media (max-width: 750px) {
 
-    .job-title-card {
-        background-color: black;
-        text-align: center;
-        margin-left: 2rem;
-        margin-right: 2rem;
+    .job-title-wrapper {
+        position: relative;
         
+        
+    }
+    .job-title-card {
+        background-color: gray;
+        border-radius: 10px;
+        text-align: center;
+        
+        position: absolute;
+        top: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
     }
 
     .job-title-card h2 {
-        margin-top: 0;
+        margin-top: 3rem;
+    }
+
+    .job-title-card .logo {
+        border-radius: 16px;
+        padding: 1rem 10px;
+        position: absolute;
+        top: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .job-title-card img {
+        width: 2rem;
+        height: 1rem;
+    }
+
+    .company-button {
+        background-color: var(--light-gray);
+        border-radius: 5px;
+        border-style: none;
+        color: var(--violet);
+        cursor: pointer;
+        font-family: 'Kumbh Sans', sans-serif; 
+        font-size: 16px;
+        font-weight: bold;
+        padding: 1rem 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .company-button:hover {
+        background-color: var(--light-violet);
+    }
+
+    .job-title-card p {
+        color: var(--gray);
     }
 }
