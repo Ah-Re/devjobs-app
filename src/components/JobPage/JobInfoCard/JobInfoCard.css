@@ -8,9 +8,64 @@
     .job-info-card {
         background-color: white;
         border-radius: 10px;
-        position: relative;
-        top: 14rem;
-        width: 90%;
+        padding: 3rem 2rem;
+        
+        margin-top: 14rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
 
     }
+
+    .job-info-card button {
+        background-color: var(--violet);
+    border-style: none;
+    color: white;
+    cursor: pointer;
+    font-family: 'Kumbh Sans', sans-serif; 
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 2rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    }
+
+    .job-info-card button:hover {
+        filter: brightness(150%);
+    }
+
+    .job-info-card .dot {
+        display: inline-block;
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+        background-color: var(--dark-gray);
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .job-info-card p {
+        color: var(--dark-gray);
+        line-height: 1.5em;
+    }
+
+    .job-info-card ul {
+        color: var(--dark-gray);
+        list-style: none;
+        padding-left: 1rem;
+        line-height: 1.5em;
+    }
+
+    .job-info-card ul li::before {
+        content: "\2022"; 
+        color: var(--violet); 
+        font-weight: bold; 
+        display: inline-block; 
+        width: 1em; 
+        margin-left: -1em; 
+    }
+
+    
+
+    
 }

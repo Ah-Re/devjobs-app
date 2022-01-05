@@ -18,6 +18,7 @@ const Modal = (props) => {
             </div>
             <hr></hr>
             <div className="checkbox-wrapper">
+            
             <input className="checkbox" id="check" type="checkbox"/> 
             <label for="check">Full Time Only</label>
             </div>

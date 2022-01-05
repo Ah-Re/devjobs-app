@@ -1,18 +1,19 @@
-
-@media (max-width: 750px) {
-
-    
+@media (max-width: 1000px) {
     .nav-bar {
-        background: url('../../assets/mobile/bg-pattern-header.svg');
-        padding: 1rem 1rem 4rem 1rem;
+        background: url('../../assets/tablet/bg-pattern-header.svg');
+        background-size: cover;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 2rem 1rem 4rem 1rem;
+        position: relative;
     }
 
     .nav-bar h1 {
         color: white;
+        cursor: pointer;
         margin-top: 0;
+        font-size: 30px;
     }
 
     .toggle-btn {
@@ -33,5 +34,25 @@
         height: 20px;
         border-radius: 50%;
     }
+}
+
+
+@media (max-width: 750px) {
+
+
+    .nav-bar {
+        background: url('../../assets/mobile/bg-pattern-header.svg');
+        padding: 1rem 1rem 4rem 1rem;
+
+    }
+
+    .nav-bar h1 {
+        font-size: 1.5em;
+
+    }
+
+    .toggle-btn {}
+
+    .inner-circle {}
 
 }

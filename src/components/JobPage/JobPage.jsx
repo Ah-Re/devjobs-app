@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "./JobPage.css";
 import Navbar from "../Navbar/Navbar";
 import JobTitleCard from "./JobTitleCard/JobTitleCard";
 import JobInfoCard from "./JobInfoCard/JobInfoCard";
+import { ThemeContext } from '../../App';
 import JobData from "../../data.json";
 import { useLocation } from "react-router-dom";
 
 const JobPage = (props) => {
     const { state } = useLocation();
-    
+    const dark = useContext(ThemeContext);
+
     return (
         <div className="job-page">
             <Navbar changeMode={props.changeMode}/>
@@ -32,6 +34,10 @@ const JobPage = (props) => {
 
                 // role={state.role}
             />
+
+            <div style={{backgroundColor: dark && 'var(--very-dark-blue)'}} className="button-wrapper">
+            <button>Apply Now</button>
+            </div>
 
         </div>
     )

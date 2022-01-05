@@ -1,52 +1,207 @@
+@media (max-width: 1000px) {
+    .filter-icon {
+        display: none;
+    }
+
+    .third-input-box {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .searchbar-wrapper {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 7rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+
+    .searchbar {
+        border-style: none;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-right: 1px solid var(--gray);
+        padding: 2rem 0 2rem 4rem;
+        font-family: 'Kumbh Sans', sans-serif;
+        font-size: 16px;
+    }
+
+    .searchbar-wrapper .location-search {
+        border-style: none;
+        border-right: 1px solid var(--gray);
+        padding: 2rem 0 2rem 4rem;
+        font-family: 'Kumbh Sans', sans-serif;
+        font-size: 16px;
+
+    }
+
+    .search-button {
+        background-color: var(--violet);
+        border-radius: 6px;
+        border-style: none;
+        cursor: pointer;
+        padding: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .search-button img {
+        display: none;
+    }
+
+    .search-button .button-text {
+        color: white;
+        font-family: 'Kumbh Sans', sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .search-button:hover {
+        filter: brightness(150%);
+    }
+
+    .third-input-box .checkbox {
+        cursor: pointer;
+        opacity: 0;
+        position: absolute;
+
+    }
+
+    .third-input-box .checkbox:checked+label::before {
+        background-color: var(--violet);
+        color: white;
+        content: '\002714';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .third-input-box .checkbox-wrapper {
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
+    }
+
+    .third-input-box label::before {
+
+        content: '';
+        width: 1em;
+        height: 1em;
+        background-color: var(--gray);
+        border-radius: .15em;
+        margin-right: .5em;
+    }
+
+    .third-input-box label:hover::before {
+        background-color: var(--light-violet);
+    }
+
+    .third-input-box label {
+        cursor: pointer;
+        display: flex;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    .title-search-wrapper {
+        position: relative;
+    }
+
+    .title-search-wrapper img {
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        transform: translateY(-50%);
+    }
+
+    .location-search-wrapper {
+        position: relative;
+    }
+
+    .location-search-wrapper img {
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
 
 
 
-
-@media (max-width: 750px)  {
+@media (max-width: 750px) {
     .searchbar-wrapper {
         position: relative;
-        
+        top: 0;
+
     }
 
     .searchbar {
         border-radius: 10px;
-        border-style: none;
-        font-family: 'Kumbh Sans', sans-serif;
-        font-size: 16px; 
+        border-right: none;
         padding: 2rem 1rem;
         position: absolute;
         top: -3rem;
         left: 50%;
         transform: translateX(-50%);
         width: 90%;
-        
-        
+
+
     }
 
     .searchbar::placeholder {
-        color:  var(--dark-gray);
+        color: var(--dark-gray);
+    }
+
+    .searchbar-wrapper .location-search {
+        display: none;
+    }
+
+    .searchbar-wrapper .checkbox-wrapper {
+        display: none;
     }
 
     .filter-icon {
         cursor: pointer;
+        display: flex;
         right: 34%;
         top: -0.5rem;
         position: absolute;
     }
 
     .search-button {
-        background-color: var(--violet);
         border-radius: 10px;
-        border-style: none;
-        cursor: pointer;
-        padding: 1rem;
         position: absolute;
         top: -2rem;
         right: 15%;
+        margin-left: 0;
+        margin-right: 0;
     }
 
-    .search-button:hover {
-        filter: brightness(150%);
+
+
+    .search-button .button-text {
+        display: none;
+    }
+
+    .search-button img {
+        display: flex;
+    }
+
+    .location-search-wrapper {
+        display: none;
+    }
+
+    .title-search-wrapper {
+        position: static;
+    }
+
+    .title-search-wrapper img {
+        display: none;
     }
 
 
