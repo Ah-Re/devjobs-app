@@ -1,4 +1,36 @@
+@media (max-width: 1500px) {
+    .job {
+        background-color: white;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+        padding: 3rem 2rem 2rem 2rem;
+        position: relative;
+    }
 
+    .job .dot {
+        display: inline-block;
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+        background-color: var(--dark-gray);
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .job img {
+        width: 2rem;
+        height: 1rem;
+    }
+
+    .job .logo {
+        border-radius: 12px;
+        padding: 1rem 10px;
+        position: absolute;
+        top: -1rem;
+    }
+}
+
+@media (max-width: 1000px) {}
 
 @media (max-width: 750px) {
 
@@ -14,6 +46,7 @@
         width: 2rem;
         height: 1rem;
     }
+
     .job .logo {
         border-radius: 16px;
         padding: 1rem 10px;

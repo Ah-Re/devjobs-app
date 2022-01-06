@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { ThemeContext, SearchContext } from "../../App";
 import "./Searchbar.css";
 import SearchIcon from "../../assets/desktop/icon-search.svg";
@@ -9,6 +9,21 @@ import LocationIcon from "../../assets/desktop/icon-location.svg";
 const Searchbar = (props) => {
   const dark = useContext(ThemeContext);
   const searchTerm = useContext(SearchContext);
+  const [placeholderText, setPlaceholderText] = useState("Filter by title...");
+
+  useEffect(() => {
+    window.addEventListener("resize", function () {
+      var w =
+        window.innerWidth ||
+        document.documentElement.clientWidth ||
+        document.body.clientWidth;
+      if (w > 1000) {
+        setPlaceholderText("Filter by title, companies, expertise...");
+      } else {
+        setPlaceholderText("Filter by title...");
+      }
+    });
+  });
 
   return (
     <div className="searchbar-wrapper">
@@ -21,7 +36,7 @@ const Searchbar = (props) => {
           }}
           className="searchbar"
           type="search"
-          placeholder="Filter by title..."
+          placeholder={placeholderText}
         />
       </div>
       <div className="location-search-wrapper">
