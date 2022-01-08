@@ -8,7 +8,6 @@ import LocationIcon from "../../assets/desktop/icon-location.svg";
 
 const Searchbar = (props) => {
   const dark = useContext(ThemeContext);
-  const searchTerm = useContext(SearchContext);
   const [placeholderText, setPlaceholderText] = useState("Filter by title...");
 
   useEffect(() => {
@@ -43,6 +42,9 @@ const Searchbar = (props) => {
         <img src={LocationIcon} />
         <input
           style={{ backgroundColor: dark ? "var(--very-dark-blue)" : "white" }}
+          onChange={(e) => {
+            props.changeLocationTerm(e.target.value);
+          }}
           className="location-search"
           type="search"
           placeholder="Filter by location..."
@@ -61,12 +63,24 @@ const Searchbar = (props) => {
         className="third-input-box"
       >
         <div className="checkbox-wrapper">
-          <input className="checkbox" id="check" type="checkbox" />
+          <input
+            onChange={() => {
+              props.changeFullTime();
+            }}
+            className="checkbox"
+            id="check"
+            type="checkbox"
+          />
           <label style={{ color: dark && "white" }} for="check">
             Full Time
           </label>
         </div>
-        <button onClick={() => {}} className="search-button">
+        <button
+          onClick={() => {
+            props.changeJobData();
+          }}
+          className="search-button"
+        >
           <img src={LightSearchIcon} />
           <span className="button-text">Search</span>
         </button>
