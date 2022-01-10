@@ -33,6 +33,7 @@ const Searchbar = (props) => {
           onChange={(e) => {
             props.changeSearchTerm(e.target.value);
           }}
+          value={props.filter}
           className="searchbar"
           type="search"
           placeholder={placeholderText}
@@ -45,6 +46,7 @@ const Searchbar = (props) => {
           onChange={(e) => {
             props.changeLocationTerm(e.target.value);
           }}
+          value={props.location}
           className="location-search"
           type="search"
           placeholder="Filter by location..."

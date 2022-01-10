@@ -63,6 +63,8 @@ const Home = (props) => {
         changeFullTime={changeFullTime}
         changeJobData={changeJobData}
         fullTime={fullTime}
+        filter={filter}
+        location={location}
       />
       {modal && (
         <Modal
@@ -71,6 +73,7 @@ const Home = (props) => {
           changeLocationTerm={changeLocationTerm}
           changeJobData={changeJobData}
           fullTime={fullTime}
+          location={location}
         />
       )}
       <JobsList filter={filter} location={location} jobData={jobData} />
