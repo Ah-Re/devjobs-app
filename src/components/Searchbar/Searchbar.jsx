@@ -71,7 +71,7 @@ const Searchbar = (props) => {
             id="check"
             type="checkbox"
           />
-          <label style={{ color: dark && "white" }} for="check">
+          <label style={{ color: dark && "white" }} htmlFor="check">
             Full Time
           </label>
         </div>

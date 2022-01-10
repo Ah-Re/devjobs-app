@@ -10,7 +10,6 @@ const Home = (props) => {
   const [filter, setFilter] = useState("");
   const [location, setLocation] = useState("");
   const [fullTime, setFullTime] = useState(false);
-  const [isSearching, setIsSearching] = useState(false);
   const [jobData, setJobData] = useState(JobDataFile);
 
   function changeModal() {
@@ -29,29 +28,24 @@ const Home = (props) => {
     setFullTime(!fullTime);
   }
 
-  function changeIsSearching() {
-    setIsSearching(true);
-  }
-
-  //   jobData.filter((job) => {
-  //         if (location !== "" || filter !== "") {
-  //           return (
-  //             job.location.toLowerCase().includes(location) &&
-  //             job.company.toLowerCase().includes(filter)
-  //           );
-  //         } else {
-  //           return job;
-  //         }
-  //       })
-
   function changeJobData() {
     setJobData(() => {
-      if (location !== "" || filter !== "") {
+      if (location !== "" || filter !== "" || fullTime) {
         return jobData.filter((job) => {
-          return (
-            job.location.toLowerCase().includes(location) &&
-            job.company.toLowerCase().includes(filter)
-          );
+          if (fullTime) {
+            return (
+              (job.company.toLowerCase().includes(filter) ||
+                job.position.toLowerCase().includes(filter)) &&
+              job.location.toLowerCase().includes(location) &&
+              job.contract === "Full Time"
+            );
+          } else {
+            return (
+              (job.company.toLowerCase().includes(filter) ||
+                job.position.toLowerCase().includes(filter)) &&
+              job.location.toLowerCase().includes(location)
+            );
+          }
         });
       } else {
         return JobDataFile;
