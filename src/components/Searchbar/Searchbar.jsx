@@ -67,6 +67,7 @@ const Searchbar = (props) => {
             onChange={() => {
               props.changeFullTime();
             }}
+            checked={props.fullTime}
             className="checkbox"
             id="check"
             type="checkbox"
