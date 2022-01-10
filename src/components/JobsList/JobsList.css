@@ -1,41 +1,39 @@
-@media (max-width: 1300px) {
-
-    .jobs-list {
-        margin-top: 7rem;
-        margin-left: 7rem;
-        margin-right: 7rem;
-        height: 100vh;
-    }
-
-    .job-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 1rem;
-    }
-
-    .jobs-list button {
-        background-color: var(--violet);
-        border-radius: 5px;
-        border-style: none;
-        color: white;
-        cursor: pointer;
-        font-family: 'Kumbh Sans', sans-serif;
-        font-size: 16px;
-        margin-bottom: 2rem;
-        padding: 1rem 2rem;
-
-
-    }
-
-    .jobs-list button:hover {
-        filter: brightness(150%);
-    }
-
-    .button-container {
-        display: flex;
-        justify-content: center;
-    }
+.jobs-list {
+    margin-top: 7rem;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    height: 100vh;
 }
+
+.job-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.jobs-list button {
+    background-color: var(--violet);
+    border-radius: 5px;
+    border-style: none;
+    color: white;
+    cursor: pointer;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 16px;
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+
+
+}
+
+.jobs-list button:hover {
+    filter: brightness(150%);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
 
 @media (max-width: 1000px) {
     .jobs-list {
