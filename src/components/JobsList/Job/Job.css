@@ -2,6 +2,7 @@
     .job {
         background-color: white;
         border-radius: 10px;
+        cursor: pointer;
         margin-bottom: 2rem;
         padding: 3rem 2rem 2rem 2rem;
         position: relative;

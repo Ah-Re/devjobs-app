@@ -29,7 +29,10 @@ const Searchbar = (props) => {
       <div className="title-search-wrapper">
         <img src={SearchIcon} />
         <input
-          style={{ backgroundColor: dark ? "var(--very-dark-blue)" : "white" }}
+          style={{
+            backgroundColor: dark ? "var(--very-dark-blue)" : "white",
+            color: dark ? "white" : "var(--very-dark-blue)",
+          }}
           onChange={(e) => {
             props.changeSearchTerm(e.target.value);
           }}
@@ -42,7 +45,10 @@ const Searchbar = (props) => {
       <div className="location-search-wrapper">
         <img src={LocationIcon} />
         <input
-          style={{ backgroundColor: dark ? "var(--very-dark-blue)" : "white" }}
+          style={{
+            backgroundColor: dark ? "var(--very-dark-blue)" : "white",
+            color: dark ? "white" : "var(--very-dark-blue)",
+          }}
           onChange={(e) => {
             props.changeLocationTerm(e.target.value);
           }}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Searchbar from "./components/Searchbar/Searchbar";
@@ -22,6 +22,14 @@ function App() {
   function changeMode() {
     setDark(!dark);
   }
+
+  useEffect(() => {
+    dark
+      ? (document.getElementsByTagName("body")[0].style.backgroundColor =
+          "var(--midnight)")
+      : (document.getElementsByTagName("body")[0].style.backgroundColor =
+          "var(--light-gray)");
+  });
 
   return (
     <Router>

@@ -28,7 +28,11 @@ const Modal = (props) => {
               props.changeLocationTerm(e.target.value);
             }}
             value={props.location}
-            style={dark ? { backgroundColor: "var(--very-dark-blue)" } : null}
+            style={
+              dark
+                ? { backgroundColor: "var(--very-dark-blue)", color: "white" }
+                : null
+            }
             placeholder="Filter by location"
           />
         </div>
