@@ -5,7 +5,10 @@ import Job from "./Job/Job";
 
 const JobsList = (props) => {
   const [visible, setVisible] = useState(6);
+  const numberOfJobs = props.jobData.length;
 
+  console.log(visible);
+  console.log(numberOfJobs);
   return (
     <div className="jobs-list">
       <div className="job-wrapper">
@@ -28,15 +31,17 @@ const JobsList = (props) => {
           );
         })}
       </div>
-      <div className="button-container">
-        <button
-          onClick={() => {
-            setVisible((prevValue) => prevValue + 6);
-          }}
-        >
-          Load More
-        </button>
-      </div>
+      {visible < numberOfJobs && (
+        <div className="button-container">
+          <button
+            onClick={() => {
+              setVisible((prevValue) => prevValue + 6);
+            }}
+          >
+            Load More
+          </button>
+        </div>
+      )}
     </div>
   );
 };
