@@ -23,13 +23,13 @@ function App() {
     setDark(!dark);
   }
 
-  // useEffect(() => {
-  //   dark
-  //     ? (document.getElementsByTagName("body")[0].style.backgroundColor =
-  //         "var(--midnight)")
-  //     : (document.getElementsByTagName("body")[0].style.backgroundColor =
-  //         "var(--light-gray)");
-  // });
+  useEffect(() => {
+    dark
+      ? (document.getElementsByTagName("body")[0].style.backgroundColor =
+          "var(--midnight)")
+      : (document.getElementsByTagName("body")[0].style.backgroundColor =
+          "var(--light-gray)");
+  });
 
   return (
     <Router>
