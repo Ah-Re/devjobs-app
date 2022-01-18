@@ -31,8 +31,6 @@ const JobPage = (props) => {
         requirementsItems={state.requirements.items}
         roleContent={state.role.content}
         roleItems={state.role.items}
-
-        // role={state.role}
       />
 
       <div

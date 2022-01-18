@@ -16,20 +16,20 @@ import {
 export const ThemeContext = React.createContext();
 
 function App() {
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(false);
   const [modal, setModal] = useState(false);
 
   function changeMode() {
     setDark(!dark);
   }
 
-  useEffect(() => {
-    dark
-      ? (document.getElementsByTagName("body")[0].style.backgroundColor =
-          "var(--midnight)")
-      : (document.getElementsByTagName("body")[0].style.backgroundColor =
-          "var(--light-gray)");
-  });
+  // useEffect(() => {
+  //   dark
+  //     ? (document.getElementsByTagName("body")[0].style.backgroundColor =
+  //         "var(--midnight)")
+  //     : (document.getElementsByTagName("body")[0].style.backgroundColor =
+  //         "var(--light-gray)");
+  // });
 
   return (
     <Router>

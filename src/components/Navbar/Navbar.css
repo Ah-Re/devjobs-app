@@ -1,41 +1,40 @@
-@media (max-width: 1300px) {
-    .nav-bar {
-        background: url('../../assets/desktop/bg-pattern-header.svg');
-        background-size: cover;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 2rem 7rem 4rem 7rem;
-        position: relative;
+.nav-bar {
+    background: url('../../assets/desktop/bg-pattern-header.svg');
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 7rem 4rem 7rem;
+    position: relative;
 
-    }
-
-    .nav-bar h1 {
-        color: white;
-        cursor: pointer;
-        margin-top: 0;
-        font-size: 30px;
-    }
-
-    .toggle-btn {
-        background-color: white;
-        border-radius: 30px;
-        cursor: pointer;
-        display: inline-block;
-        width: 60px;
-        height: 20px;
-        padding: 5px;
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-
-    .inner-circle {
-        background-color: var(--violet);
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-    }
 }
+
+.nav-bar h1 {
+    color: white;
+    cursor: pointer;
+    margin-top: 0;
+    font-size: 30px;
+}
+
+.toggle-btn {
+    background-color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-block;
+    width: 60px;
+    height: 20px;
+    padding: 5px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.inner-circle {
+    background-color: var(--violet);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
 
 @media (max-width: 1000px) {
     .nav-bar {

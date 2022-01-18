@@ -22,7 +22,14 @@ const JobTitleCard = (props) => {
         </div>
         <div className="job-title-button-wrapper">
           <button
-            style={{ backgroundColor: dark && "var(--light-violet)" }}
+            style={
+              dark
+                ? { backgroundColor: "var(--midnight)", color: "white" }
+                : {
+                    backgroundColor: "var(--light-gray)",
+                    color: "var(--violet)",
+                  }
+            }
             className="company-button"
           >
             Company Site
